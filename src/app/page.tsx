@@ -1,8 +1,20 @@
-import Image from "next/image";
 import Navbar from "@/components/organisms/Navbar";
+import Presentation from "@/components/organisms/Presentation";
+import Projects from "@/components/organisms/Projects";
 
 export default function Home() {
   return (
-    <Navbar/>
+    <div>
+
+      <Navbar /> <div className="h-14" id="navbar-spacer" /> {/* espaçador da navbar */}
+      <Presentation />
+
+
+      <Projects/>
+
+      
+      <Presentation />  
+      
+    </div>
   );
 }

@@ -1,10 +1,9 @@
-"use client"; 
+"use client";
 import React, { useState } from "react";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar o menu hambúrguer
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Função para alternar o menu
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -16,7 +15,6 @@ export default function Navbar() {
           <a href="#">Garibaldi</a>
         </div>
 
-        {/* Menu links, com classe "active" aplicada quando o menu hambúrguer estiver aberto */}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><a href="#">Projetos</a></li>
           <li><a href="#">Sobre Mim</a></li>
@@ -24,7 +22,6 @@ export default function Navbar() {
           <li><a href="#">Conhecimento</a></li>
         </ul>
 
-        {/* Menu hambúrguer */}
         <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -32,10 +29,8 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Overlay escurecido quando o menu está aberto */}
       {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
 
-      {/* Estilos CSS inline */}
       <style jsx>{`
         * {
           margin: 0;
@@ -56,9 +51,9 @@ export default function Navbar() {
           top: 0;
           left: 0;
           right: 0;
-          background-color: white; /* Navbar com fundo branco */
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-          z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+          background-color: white;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          z-index: 1000;
         }
 
         .navbar .logo a {
@@ -71,30 +66,36 @@ export default function Navbar() {
         .nav-links {
           list-style: none;
           display: flex;
-          transition: transform 0.3s ease; /* Adiciona a transição suave */
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          transition: transform 0.3s ease;
         }
 
         .nav-links li {
-          margin-left: 20px;
+          margin: 15px 0;
         }
 
         .nav-links a {
           color: black;
           text-decoration: none;
           font-size: 18px;
-          transition: transform 0.3s ease; /* Adiciona a transição de animação */
+          transition: transform 0.3s ease;
         }
 
         .nav-links a:hover {
           color: #f4a261;
-          transform: translateY(-5px); /* "Levanta" o item quando o mouse passa */
+          transform: translateY(-5px);
         }
 
-        /* Estilos para o Menu Hambúrguer */
         .hamburger {
           display: none;
           flex-direction: column;
           cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 20px;
         }
 
         .hamburger .bar {
@@ -105,11 +106,8 @@ export default function Navbar() {
           transition: all 0.3s ease;
         }
 
-        /* Quando o menu estiver aberto, as barras se transformam em "X" */
         .hamburger.open .bar:nth-child(1) {
-          transform: rotate(45deg);
-          position: relative;
-          top: 6px;
+          transform: translateY(8px) rotate(45deg);
         }
 
         .hamburger.open .bar:nth-child(2) {
@@ -117,32 +115,27 @@ export default function Navbar() {
         }
 
         .hamburger.open .bar:nth-child(3) {
-          transform: rotate(-45deg);
-          position: relative;
-          top: -6px;
+          transform: translateY(-14px) rotate(-45deg);
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
           .nav-links {
             position: fixed;
-            top: 60px;
+            top: 0;
             right: 0;
-            width: 50%; /* 50% da largura da tela */
+            width: 50%;
             height: 100vh;
             background-color: white;
             flex-direction: column;
             align-items: center;
-            display: none;
-            z-index: 1;
-            box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3); /* Sombras na metade da tela */
-            transform: translateX(100%); /* Começa fora da tela */
-            transition: transform 0.3s ease-in-out; /* Transição suave ao abrir */
+            display: flex;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: -10px 0 15px rgba(0, 0, 0, 0.3);
           }
 
           .nav-links.active {
-            display: flex;
-            transform: translateX(0); /* Mostra o menu deslizando */
+            transform: translateX(0);
           }
 
           .hamburger {
@@ -150,14 +143,33 @@ export default function Navbar() {
           }
         }
 
-        /* Overlay escurecido */
+        @media (min-width: 769px) {
+          .nav-links {
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            transform: none;
+            position: static;
+            background: none;
+            box-shadow: none;
+          }
+
+          .nav-links li {
+            margin: 0 15px;
+          }
+
+          .hamburger {
+            display: none;
+          }
+        }
+
         .overlay {
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100vh;
-          background-color: rgba(0, 0, 0, 0.5); /* Escurecer o lado oposto */
+          background-color: rgba(0, 0, 0, 0.5);
           z-index: 999;
         }
       `}</style>
