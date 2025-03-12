@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
-import { Input } from "../ui/input";
 import WhatsappIcon from "../../../assets/icons/WhatsappIcon";
-import { Label } from "../ui/label";
 import SendButton from "../atoms/SendButton";
 
 

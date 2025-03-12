@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className="navbar items-center opacity-90 bg-gray-800 text-white">
         <div className="logo">
           <a href="#">Garibaldi</a>
         </div>
@@ -51,13 +51,11 @@ export default function Navbar() {
           top: 0;
           left: 0;
           right: 0;
-          background-color: white;
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           z-index: 1000;
         }
 
         .navbar .logo a {
-          color: black;
           text-decoration: none;
           font-size: 24px;
           font-weight: bold;
@@ -78,7 +76,7 @@ export default function Navbar() {
         }
 
         .nav-links a {
-          color: black;
+
           text-decoration: none;
           font-size: 18px;
           transition: transform 0.3s ease;
@@ -87,6 +85,7 @@ export default function Navbar() {
         .nav-links a:hover {
           color: #f4a261;
           transform: translateY(-5px);
+          
         }
 
         .hamburger {
@@ -125,7 +124,7 @@ export default function Navbar() {
             right: 0;
             width: 50%;
             height: 100vh;
-            background-color: white;
+            background-color: black;
             flex-direction: column;
             align-items: center;
             display: flex;

@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .animation-delay-2000{
+    animation-delay: 2s;
+  }
 
+  .animation-delay-4000{
+    animation-delay: 4s;
+  }
+}
 
 @layer base {
   :root {
@@ -118,4 +126,35 @@
   body {
     @apply bg-background text-foreground;
   }
+
+
+  .custom-shape-divider-bottom-1741716862 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1741716862 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 269px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1741716862 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1741716862 svg {
+        width: calc(186% + 1.3px);
+        height: 317px;
+    }
+}
 }
