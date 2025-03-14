@@ -1,16 +1,19 @@
-"use client";
+"use client"
 
 import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import WhatsappIcon from "../../../assets/icons/WhatsappIcon";
 import SendButton from "../atoms/SendButton";
+import Background from "../atoms/Background";
 
 
 export default function Contact() {
     return (
-        <div className="text-white text-center p-8 space-y-8" style={{ backgroundColor: "#292c2c" }}>
+        <div id="Contact" className="text-white text-center p-8 space-y-8 mt-44  transition-all duration-300  hover:bg-white/10 hover:!opacity-100 hover:shadow-md">
+
             <div>
                 <h1 className="text-lg font-semibold text-orange-500">Contact</h1>
+
 
 
                 <motion.h1
@@ -36,7 +39,7 @@ export default function Contact() {
                                 className="text-white hover:text-green-500"
                                 transition={{ duration: 0.3, repeat: 1 }}
                             >
-                                <WhatsappIcon  />
+                                <WhatsappIcon />
                             </motion.div>
 
                             Entre em contato via Whatsapp!
@@ -50,6 +53,9 @@ export default function Contact() {
 
 
                         <SendButton />
+                        <Background
+                            size={"10"}
+                        />
                     </div>
                 </div>
             </div>

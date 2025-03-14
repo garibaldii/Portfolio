@@ -16,10 +16,10 @@ export default function Navbar() {
         </div>
 
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Sobre Mim</a></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="#">Conhecimento</a></li>
+          <li><a href="#Projects">Projetos</a></li>
+          <li><a href="#AboutMe">Sobre Mim</a></li>
+          <li><a href="#Contact">Contato</a></li>
+          <li><a href="#Knowledge">Conhecimento</a></li>
         </ul>
 
         <div className={`hamburger ${menuOpen ? "open" : ""}`} onClick={toggleMenu}>

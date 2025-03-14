@@ -16,8 +16,12 @@ export default function Projects() {
     }, []); // O array vazio [] garante que isso será executado apenas uma vez, após a montagem do componente
 
     return (
-        <div>
-            <div className="sm:flex items-center justify-end max-w-4xl mx-auto p-8 rounded-lg text-white">
+        <div >
+            <Background 
+            size={"10"}
+            />
+
+            <div id="Projects" className="sm:flex items-center justify-end max-w-4xl mx-auto p-8 rounded-lg text-white scroll-mt-[53px]  mt-44">
                 <div className="flex flex-col " >
                     <h1 className=" text-4xl font-bold mb-3">My Projects</h1>
                     <p className="text-orange-600">Take a look at my personal projects!</p>

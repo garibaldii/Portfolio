@@ -7,15 +7,20 @@ import NextIcon from "../../../assets/icons/NextIcon"
 import ReactIcon from "../../../assets/icons/ReactIcon"
 import TailwindIcon from "../../../assets/icons/TailwindIcon"
 import TypescriptIcon from "../../../assets/icons/TypescriptIcon"
+import Background from "../atoms/Background"
 
 export default function Knowledge() {
     return (
-        <div className="flex flex-col items-center text-white">
+        <div id="Knowledge" className="flex flex-col items-center text-white scroll-mt-[250px]  mt-44  transition-all duration-300  hover:bg-white/10 hover:!opacity-100 hover:shadow-md">
+
+            <Background
+                size={"10"}
+            />
             <h1 className=" text-4xl font-bold mb-3">Knowledge</h1>
             <p>Not a professional, but working hard everyday to make it</p>
 
 
-            <div id="technologies" className="flex">
+            <div className="flex">
                 <div id="languages" className="flex space-x-3">
                     <p className="w-8 h-8">
                         <JavaIcon width={32} height={32} />

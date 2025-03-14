@@ -125,7 +125,7 @@ export default function SendButton() {
             </div>
 
             <Button
-                className={`h-10 flex items-center justify-center transition-all duration-300 ${isSent ? "bg-green-500" : "bg-black"}`}
+                className={`h-10 flex items-center justify-center transition-all duration-300 ${isSent ? "bg-green-500" : "bg-black"} hover:bg-gray-900`}
                 onClick={handleSend}
                 disabled={isSent}
             >

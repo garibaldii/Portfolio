@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-  .animation-delay-2000{
+@layer utilities {
+  .animation-delay-2000 {
     animation-delay: 2s;
   }
 
-  .animation-delay-4000{
+  .animation-delay-4000 {
     animation-delay: 4s;
   }
 }
@@ -65,6 +65,7 @@
 
     --radius: 0.5rem
   }
+
   .dark {
 
     --background: 0 0% 3.9%;
@@ -123,6 +124,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -136,25 +138,31 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-}
+  }
 
-.custom-shape-divider-bottom-1741716862 svg {
+  .custom-shape-divider-bottom-1741716862 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
     height: 269px;
     transform: rotateY(180deg);
-}
+  }
 
-.custom-shape-divider-bottom-1741716862 .shape-fill {
+  .custom-shape-divider-bottom-1741716862 .shape-fill {
     fill: #FFFFFF;
+  }
+
+  /** For tablet devices **/
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1741716862 svg {
+      width: calc(186% + 1.3px);
+      height: 317px;
+    }
+  }
 }
 
-/** For tablet devices **/
-@media (min-width: 768px) and (max-width: 1023px) {
-    .custom-shape-divider-bottom-1741716862 svg {
-        width: calc(186% + 1.3px);
-        height: 317px;
-    }
+html {
+  scroll-behavior: smooth;
 }
-}
+
+
