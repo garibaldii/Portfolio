@@ -15,19 +15,19 @@ export default function ProjectCard({
     technologies
 }: ProjectCardProps) {
     return (
-        <div className="flex w-full items-center p-4 rounded-lg  transition-all duration-300 
+        <div className="flex flex-col p-4 sm:w-[300px] h-auto sm:h-[350px] rounded-lg transition-all duration-300 
                         hover:rounded-2xl hover:bg-white/10 hover:!opacity-100 hover:shadow-md
-                        group-hover:opacity-50 cursor-pointer text-white">
+                        group-hover:opacity-50 cursor-pointer text-white mx-auto">
 
             {/* Contêiner da Imagem */}
-            <div className="w-1/4 h-full overflow-hidden rounded-lg ">
+            <div className="w-full h-[120px] flex justify-center items-center overflow-hidden rounded-lg">
                 {imagePath ? (
                     <Image
                         src={imagePath}
                         alt={name}
                         width={200}
-                        height={2}
-                        className="object-contain "
+                        height={120}
+                        className="object-contain"
                     />
                 ) : (
                     <div className="flex items-center justify-center w-full h-full bg-gray-200 text-gray-500">
@@ -37,12 +37,13 @@ export default function ProjectCard({
             </div>
 
             {/* Conteúdo do Projeto */}
-            <div className="flex-1 pl-7">
-                <CardTitle >{name}</CardTitle>
-                <CardDescription className="text-white">{description}</CardDescription>
-                <p className="text-sm text-gray-600">{technologies}</p>
+            <div className="flex flex-col flex-1 justify-between mt-4">
+                <CardTitle className="text-lg text-center">{name}</CardTitle>
+                <CardDescription className="text-white overflow-y-auto max-h-24 line-clamp-4 px-2">
+                    {description}
+                </CardDescription>
+                <p className="text-sm text-gray-400 text-center">{technologies}</p>
             </div>
-
         </div>
     );
 }

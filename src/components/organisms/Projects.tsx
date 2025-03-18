@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Certifique-se de importar o CSS do AOS
-import { Button } from "../ui/button";
 import ProjectCard from "../atoms/ProjectCard";
 import Background from "../atoms/Background";
+import { motion } from "framer-motion";
 
 export default function Projects() {
     useEffect(() => {
@@ -17,19 +17,25 @@ export default function Projects() {
 
     return (
         <div >
-            <Background 
-            size={"10"}
+            <Background
+
             />
 
-            <div id="Projects" className="sm:flex items-center justify-end max-w-4xl mx-auto p-8 rounded-lg text-white scroll-mt-[53px]  mt-44">
+            <div id="Projects" className="flex flex-col overflow-y-hidden items-center sm:justify-end max-w-4xl mx-auto rounded-lg text-white scroll-mt-[53px] mt-44 sm:p-8">
                 <div className="flex flex-col " >
-                    <h1 className=" text-4xl font-bold mb-3">My Projects</h1>
+                    <motion.h1
+                        className="text-4xl font-bold"
+                        animate={{ opacity: 1, y: [0, -4, 0] }} // Aparece e gira para posição normal
+                        transition={{ duration: 2, ease: "easeInOut", repeatType: "mirror", repeat: Infinity }}
+                    >
+                        My Projects
+                    </motion.h1>
                     <p className="text-orange-600">Take a look at my personal projects!</p>
 
 
                 </div>
 
-                <div id="projects" className="flex flex-col items-center group w-3/4">
+                <div id="projects" className="grid grid-cols-2 w-full sm:flex-col group  ">
                     <ProjectCard
                         name="BigFort São Conrado"
                         description="Landing page desenvolvida a partir da necessidade da Farmácia BigFort São Conrado ter uma identidade própria."

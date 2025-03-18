@@ -9,7 +9,7 @@ import Background from "../atoms/Background";
 
 export default function Contact() {
     return (
-        <div id="Contact" className="text-white text-center p-8 space-y-8 mt-44  transition-all duration-300  hover:bg-white/10 hover:!opacity-100 hover:shadow-md">
+        <div id="Contact" className="text-white text-center p-8 space-y-8 mt-44 transition-all duration-300 sm:hover:bg-white/10 sm:hover:shadow-md">
 
             <div>
                 <h1 className="text-lg font-semibold text-orange-500">Contact</h1>
@@ -34,9 +34,9 @@ export default function Contact() {
                 <div className="flex flex-col items-center gap-3 mt-2">
 
                     <div id="social-medias" className="w-72">
-                        <Button className="w-full flex items-center justify-center gap-2 transition-transform duration-300 hover:scale-105">
+                        <Button className="w-full bg-green-500 flex items-center justify-center gap-2  transition-all duration-300 hover:bg-green-600">
                             <motion.div
-                                className="text-white hover:text-green-500"
+                                className="text-white"
                                 transition={{ duration: 0.3, repeat: 1 }}
                             >
                                 <WhatsappIcon />
@@ -49,12 +49,12 @@ export default function Contact() {
 
                     <p className="text-gray-400">ou</p>
 
-                    <div id="email" className="w-72 text-left space-y-2">
+                    <div id="email" className="w-72 text-left space-y-2 z-10">
 
 
                         <SendButton />
                         <Background
-                            size={"10"}
+
                         />
                     </div>
                 </div>

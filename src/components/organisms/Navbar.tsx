@@ -100,7 +100,7 @@ export default function Navbar() {
         .hamburger .bar {
           width: 25px;
           height: 3px;
-          background-color: #333;
+          background-color: #fff;
           margin: 4px 0;
           transition: all 0.3s ease;
         }

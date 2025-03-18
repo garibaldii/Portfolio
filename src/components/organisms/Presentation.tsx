@@ -14,9 +14,7 @@ export default function Presentation() {
 
 
 
-        <div id="AboutMe" className="flex flex-col  sm:flex-row items-center justify-between max-w-4xl mx-auto  text-white  mt-44 ">
-
-
+        <div id="AboutMe" className="flex flex-col mt-10 sm:flex-row items-center justify-between max-w-4xl mx-auto  text-white  sm:mt-44 ">
 
 
             {/* Texto */}
@@ -30,6 +28,12 @@ export default function Presentation() {
 
 
                 <h2 className="text-2xl sm:text-5xl font-extrabold mt-2 ">Software Developer</h2>
+
+                <div>
+
+                </div>
+
+
 
                 <div className=" h-[100px] overflow-hidden mt-5">
                     <TypeWrited

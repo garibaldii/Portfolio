@@ -3,12 +3,11 @@
 import Navbar from "@/components/organisms/Navbar";
 import Presentation from "@/components/organisms/Presentation";
 import Projects from "@/components/organisms/Projects";
-import Knowledge from "@/components/organisms/Knowledge";
 import Contact from "@/components/organisms/Contact";
 
 import { motion } from "framer-motion"
 import { ParticlesStar } from "@/components/background/ParticlesStarComponent";
-import Background from "@/components/atoms/Background";
+import Knowledge from "@/components/organisms/Knowledge";
 
 
 export default function Home() {
@@ -17,24 +16,22 @@ export default function Home() {
 
 
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden  overflow-y-hidden p-3">
       <ParticlesStar />
       <Navbar />
 
-      <Background
-        size={"10"}
-      />
       <motion.div
         className="relative"
-        animate={{ opacity: 1, y: [0, -3, 0] }} // Aparece e gira para posição normal
+        animate={{ opacity: 1, y: [0, - 0.0000001, 0] }} // Aparece e gira para posição normal
         transition={{ duration: 2, ease: "circInOut", repeatType: "mirror", repeat: Infinity }}
       >
+        
 
         <div className="h-14" id="navbar-spacer" />
         <Presentation />
         <Projects />
 
-        <Knowledge />
+        <Knowledge/>
         <Contact />
 
       </motion.div >

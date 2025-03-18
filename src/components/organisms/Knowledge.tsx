@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import AngularIcon from "../../../assets/icons/AngularIcon"
 import JavaIcon from "../../../assets/icons/JavaIcon"
 import JavascriptIcon from "../../../assets/icons/JavascriptIcon"
@@ -11,12 +12,17 @@ import Background from "../atoms/Background"
 
 export default function Knowledge() {
     return (
-        <div id="Knowledge" className="flex flex-col items-center text-white scroll-mt-[250px]  mt-44  transition-all duration-300  hover:bg-white/10 hover:!opacity-100 hover:shadow-md">
+        <div id="Knowledge" className="flex flex-col items-center text-white scroll-mt-[250px] mt-44 transition-all duration-300 sm:hover:bg-white/10 sm:hover:!opacity-100 sm:hover:shadow-md">
 
             <Background
-                size={"10"}
             />
-            <h1 className=" text-4xl font-bold mb-3">Knowledge</h1>
+            <motion.h1
+                className="text-4xl font-bold"
+                animate={{ opacity: 1, y: [0, -4, 0] }} // Aparece e gira para posição normal
+                transition={{ duration: 2, ease: "easeInOut", repeatType: "mirror", repeat: Infinity }}
+            >
+                Knowledge
+            </motion.h1>
             <p>Not a professional, but working hard everyday to make it</p>
 
 
