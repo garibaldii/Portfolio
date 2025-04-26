@@ -6,7 +6,6 @@ import Projects from "@/components/organisms/Projects";
 import Contact from "@/components/organisms/Contact";
 
 import { motion } from "framer-motion"
-import { ParticlesStar } from "@/components/background/ParticlesStarComponent";
 import Knowledge from "@/components/organisms/Knowledge";
 
 
@@ -16,9 +15,8 @@ export default function Home() {
 
 
   return (
-    <div className="relative overflow-x-hidden  overflow-y-hidden p-3">
-      <ParticlesStar />
-      <Navbar />
+    <div className="relative overflow-x-hidden  overflow-y-hidden p-3 bg-black">
+      <Navbar />  
 
       <motion.div
         className="relative"
