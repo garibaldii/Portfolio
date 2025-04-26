@@ -33,17 +33,18 @@ export default function Presentation() {
 
                 </div>
 
-
+               
 
                 <div className=" h-[100px] overflow-hidden mt-5">
                     <TypeWrited
-                        texts={["Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus netus in Aliquet donec morbi convallis pretium. Turpis tempus pharetra"]}
+                        texts={["Sou Matheus Garibaldi, estudante de Desenvolvimento de Software Multiplataformas (FATEC Votorantim). Este portfólio reúne meus projetos, experiências e conhecimentos adquiridos em desenvolvimento FullStack. "]}
                         typeSpeed={15}
                     />
+
+
                 </div>
-                <Button className="hidden sm:mt-6 py-3 text-white font-bold rounded-md">
-                    Hire Me
-                </Button>
+            <p className="text-orange-600">A Tecnologia Move o Mundo - Steve Jobs 🍎</p>
+
             </div>
 
             {/* Imagem e Ícones Sociais */}

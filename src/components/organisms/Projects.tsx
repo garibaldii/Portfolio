@@ -56,7 +56,7 @@ export default function Projects() {
                     />
                     <ProjectCard
                         name="LDS SOLAR Distribuidora"
-                        description="Sistema em desenvolvimento que busca automatizar e integrar o estoque com o sistema de orçamentos já existente."
+                        description="Sistma que gerencia as vendas de uma distribuidora de energia solar. O sistema é capaz de gerar relatórios e controlar estoque"
                         imagePath="/images/lds.jpg"
                         technologies="React/NextJS & Typescript"
                     />
