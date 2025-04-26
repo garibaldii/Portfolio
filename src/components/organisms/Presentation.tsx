@@ -1,21 +1,18 @@
 "use client"
 
-import { Button } from "../ui/button";
 import { Box } from "@mui/material";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "lucide-react";
 import TypeWrited from "../molecules/TypeWrited";
 import WhatsappIcon from "../../../assets/icons/WhatsappIcon";
-import Background from "../atoms/Background";
 
 
 export default function Presentation() {
     return (
 
 
-
+        
 
         <div id="AboutMe" className="flex flex-col mt-10 sm:flex-row items-center justify-between max-w-4xl mx-auto  text-white  sm:mt-44 ">
-
 
             {/* Texto */}
             <div className="sm:w-1/2">

@@ -21,7 +21,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: [0, -4, 0] }} // Aparece e gira para posição normal
                     transition={{ duration: 2, ease: "easeInOut", repeatType: "mirror", repeat: Infinity }}
                 >
-                    Let's get started. 📲
+                    Let&apos;ts get started. 📲
                 </motion.h1>
 
 
