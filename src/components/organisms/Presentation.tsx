@@ -48,7 +48,7 @@ export default function Presentation() {
             <div className="sm:w-1/2 flex flex-col items-center">
                 <Box
                     component="img"
-                    src="/images/me.jpg"
+                    src="/images/yo 2.jpg"
                     alt="Matheus Garibaldi"
                     sx={{
                         width: 200,

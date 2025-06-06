@@ -35,7 +35,7 @@ export default function Projects() {
 
                 </div>
 
-                <div id="projects" className="grid grid-cols-2 w-full sm:flex-col group  ">
+                <div id="projects" className="grid grid-cols-2 w-full sm:flex group  ">
                     <ProjectCard
                         name="BigFort São Conrado"
                         description="Landing page desenvolvida a partir da necessidade da Farmácia BigFort São Conrado ter uma identidade própria."
@@ -48,12 +48,7 @@ export default function Projects() {
                         imagePath="/images/cadastroProfessores.png"
                         technologies="React/NextJS & Typescript"
                     />
-                    <ProjectCard
-                        name="Sol no Bolso"
-                        description="Já pensou em um marketplace voltado a kit solares? Poder observar todos os preços das distribuidoras? Além de ferramentas que te auxiliam a instalar um kit, como por exemplo gerar informações conforme o telhado do cliente. Com a Sol no Bolso será possível!"
-                        imagePath="/images/solNoBolso.png"
-                        technologies="Java/Spring & React/Next"
-                    />
+                    
                     <ProjectCard
                         name="LDS SOLAR Distribuidora"
                         description="Sistma que gerencia as vendas de uma distribuidora de energia solar. O sistema é capaz de gerar relatórios e controlar estoque"
